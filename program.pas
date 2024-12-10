@@ -23,6 +23,16 @@ var
     pilihan: string;
     lagi: string;
 
+procedure TampilkanJenisMobil;
+begin
+    writeln('Selamat Datang di Showroom Sukses Bersama');
+    writeln('Pilih jenis mobil:');
+    writeln('1. Sedan');
+    writeln('2. LCGC');
+    writeln('3. MPV');
+    writeln('4. SUV');
+end;
+
 begin
     write('Welcome To Our Showroom')
 end.
