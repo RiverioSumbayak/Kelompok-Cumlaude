@@ -5,7 +5,7 @@ type
 
     Mobil = record
         merk: string;
-        harga: real;
+        harga: longint;
     end;
 
 
@@ -37,7 +37,7 @@ procedure TampilkanMerkMobil(jenis: integer);
 var
     i: integer;
 begin
-    writeln('Pilih merk mobil (1-5):');
+    writeln('Pilih merk mobil (1-3):');
     for i := 1 to 3 do
         writeln(i, '. ', showroom[jenis].daftarMobil[i].merk);
 end;
