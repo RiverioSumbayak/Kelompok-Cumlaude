@@ -101,6 +101,44 @@ begin
   showroom[4].daftarMobil[2].merk := 'Honda CR-V'; showroom[4].daftarMobil[2].harga := 600000000;
   showroom[4].daftarMobil[3].merk := 'Mitsubishi Pajero'; showroom[4].daftarMobil[3].harga := 700000000;
 
+
+  repeat
+    clrscr;
+    // Menampilkan pilihan jenis mobil
+    TampilkanJenisMobil;
+    write('Masukkan pilihan jenis mobil (1-4): ');
+    readln(pilihanJenis);
+
+    // Memeriksa apakah pilihan jenis mobil valid
+    if (pilihanJenis < 1) or (pilihanJenis > 4) then
+    begin
+      writeln('Pilihan jenis mobil tidak valid!');
+      halt;
+    end;
+
+    // Menampilkan merk-merk mobil dari jenis yang dipilih
+    TampilkanMerkMobil(pilihanJenis);
+    write('Masukkan pilihan merk mobil (1-3): ');
+    readln(pilihanMerk);
+
+    // Memeriksa apakah pilihan merk mobil valid
+    if (pilihanMerk < 1) or (pilihanMerk > 5) then
+    begin
+      writeln('Pilihan merk mobil tidak valid!');
+      halt;
+    end;
+
+    // Memilih skema pembayaran
+    PilihSkemaPembayaran;
+
+    // Menampilkan harga dan rincian pembayaran
+    TampilkanHargaDanPembayaran(pilihanJenis, pilihanMerk);
+
+    writeln;
+    write('Apakah Anda ingin memilih mobil lagi? (ya/tidak): ');
+    readln(lagi);
+  until (lagi = 'tidak') or (lagi = 'Tidak');
+  
 begin
     write('Welcome To Our Showroom')
 end.
