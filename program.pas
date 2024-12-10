@@ -62,6 +62,24 @@ begin
     writeln('Pilihan tidak valid.');
 end;
 
+procedure TampilkanHargaDanPembayaran(jenis, merk: integer);
+begin
+  writeln('Anda memilih mobil: ', showroom[jenis].daftarMobil[merk].merk);
+  writeln('Harga mobil: Rp ', showroom[jenis].daftarMobil[merk].harga:0:0);
+  if skemaPembayaran = 'Cicilan' then
+  begin
+    writeln('Masukkan lama cicilan (dalam tahun): ');
+    readln(lamaCicilan);
+    cicilan := HitungCicilan(showroom[jenis].daftarMobil[merk].harga, lamaCicilan);
+    writeln('Cicilan per bulan: Rp ', cicilan:0:0);
+  end
+  else if skemaPembayaran = 'Cash' then
+  begin
+    writeln('Total pembayaran (cash): Rp ', showroom[jenis].daftarMobil[merk].harga:0:0);
+  end;
+end;
+
+
 begin
     write('Welcome To Our Showroom')
 end.
