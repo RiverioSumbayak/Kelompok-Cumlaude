@@ -138,7 +138,11 @@ begin
     write('Apakah Anda ingin memilih mobil lagi? (ya/tidak): ');
     readln(lagi);
   until (lagi = 'tidak') or (lagi = 'Tidak');
-  
+
+
+    writeln('Terima kasih telah berbelanja di showroom kami!');
+end.
+
 begin
     write('Welcome To Our Showroom')
 end.
