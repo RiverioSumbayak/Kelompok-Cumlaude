@@ -24,5 +24,5 @@ var
     lagi: string;
 
 begin
-    write('Wlcome To Our Shoeroom')
+    write('Welcome To Our Showroom')
 end.
