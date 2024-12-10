@@ -33,6 +33,15 @@ begin
     writeln('4. SUV');
 end;
 
+procedure TampilkanMerkMobil(jenis: integer);
+var
+    i: integer;
+begin
+    writeln('Pilih merk mobil (1-5):');
+    for i := 1 to 3 do
+        writeln(i, '. ', showroom[jenis].daftarMobil[i].merk);
+end;
+
 begin
     write('Welcome To Our Showroom')
 end.
