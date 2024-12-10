@@ -42,6 +42,11 @@ begin
         writeln(i, '. ', showroom[jenis].daftarMobil[i].merk);
 end;
 
+function HitungCicilan(harga: real; lamaCicilan: integer): real;
+begin
+    HitungCicilan := harga / (lamaCicilan * 12);
+end;
+
 begin
     write('Welcome To Our Showroom')
 end.
