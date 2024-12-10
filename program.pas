@@ -79,6 +79,27 @@ begin
   end;
 end;
 
+begin
+  // Data harga mobil berdasarkan jenis dan merk
+  showroom[1].namaJenis := 'Sedan';
+  showroom[1].daftarMobil[1].merk := 'Toyota Camry'; showroom[1].daftarMobil[1].harga := 500000000;
+  showroom[1].daftarMobil[2].merk := 'Honda Accord'; showroom[1].daftarMobil[2].harga := 450000000;
+  showroom[1].daftarMobil[3].merk := 'BMW 3 Series'; showroom[1].daftarMobil[3].harga := 900000000;
+
+  showroom[2].namaJenis := 'LCGC';
+  showroom[2].daftarMobil[1].merk := 'Toyota Agya'; showroom[2].daftarMobil[1].harga := 150000000;
+  showroom[2].daftarMobil[2].merk := 'Honda Brio'; showroom[2].daftarMobil[2].harga := 160000000;
+  showroom[2].daftarMobil[3].merk := 'Datsun Go'; showroom[2].daftarMobil[3].harga := 140000000;
+
+  showroom[3].namaJenis := 'MPV';
+  showroom[3].daftarMobil[1].merk := 'Toyota Innova'; showroom[3].daftarMobil[1].harga := 400000000;
+  showroom[3].daftarMobil[2].merk := 'Honda Mobilio'; showroom[3].daftarMobil[2].harga := 350000000;
+  showroom[3].daftarMobil[3].merk := 'Mitsubishi Xpander'; showroom[3].daftarMobil[3].harga := 375000000;
+
+  showroom[4].namaJenis := 'SUV';
+  showroom[4].daftarMobil[1].merk := 'Toyota Fortuner'; showroom[4].daftarMobil[1].harga := 650000000;
+  showroom[4].daftarMobil[2].merk := 'Honda CR-V'; showroom[4].daftarMobil[2].harga := 600000000;
+  showroom[4].daftarMobil[3].merk := 'Mitsubishi Pajero'; showroom[4].daftarMobil[3].harga := 700000000;
 
 begin
     write('Welcome To Our Showroom')
