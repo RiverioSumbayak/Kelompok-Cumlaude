@@ -47,6 +47,21 @@ begin
     HitungCicilan := harga / (lamaCicilan * 12);
 end;
 
+procedure PilihSkemaPembayaran;
+begin
+  writeln('Pilih skema pembayaran:');
+  writeln('1. Cicilan');
+  writeln('2. Cash');
+  write('Masukkan pilihan (1 atau 2): ');
+  readln(pilihan);
+  if pilihan = '1' then
+    skemaPembayaran := 'Cicilan'
+  else if pilihan = '2' then
+    skemaPembayaran := 'Cash'
+  else
+    writeln('Pilihan tidak valid.');
+end;
+
 begin
     write('Welcome To Our Showroom')
 end.
