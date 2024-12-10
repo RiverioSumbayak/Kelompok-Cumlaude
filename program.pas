@@ -142,7 +142,3 @@ begin
 
     writeln('Terima kasih telah berbelanja di showroom kami!');
 end.
-
-begin
-    write('Welcome To Our Showroom')
-end.
