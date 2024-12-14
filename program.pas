@@ -25,7 +25,9 @@ var
 
 procedure TampilkanJenisMobil;
 begin
-    writeln('Selamat Datang di Showroom Sukses Bersama');
+    writeln('===============================');
+    writeln('   SELAMAT DATANG DI SHOWROOM   ');
+    writeln('===============================');
     writeln('Pilih jenis mobil:');
     writeln('1. Sedan');
     writeln('2. LCGC');
@@ -37,9 +39,11 @@ procedure TampilkanMerkMobil(jenis: integer);
 var
     i: integer;
 begin
+    writeln('===============================');
     writeln('Pilih merk mobil (1-3):');
     for i := 1 to 3 do
         writeln(i, '. ', showroom[jenis].daftarMobil[i].merk);
+    writeln('===============================');
 end;
 
 function HitungCicilan(harga: real; lamaCicilan: integer): real;
@@ -50,7 +54,9 @@ end;
 
 procedure PilihSkemaPembayaran;
 begin
-    writeln('Pilih skema pembayaran:');
+    writeln('===============================');
+    writeln('   PILIH SKEMA PEMBAYARAN    ');
+    writeln('===============================');
     writeln('1. Cicilan');
     writeln('2. Cash');
     write('Masukkan pilihan (1 atau 2): ');
@@ -61,23 +67,37 @@ begin
         skemaPembayaran := 'Cash'
     else
         writeln('Pilihan tidak valid.');
+    writeln('===============================');
 end;
 
 procedure TampilkanHargaDanPembayaran(jenis, merk: integer);
 begin
-    writeln('Anda memilih mobil: ', showroom[jenis].daftarMobil[merk].merk);
-    writeln('Harga mobil: Rp ', showroom[jenis].daftarMobil[merk].harga:0:0);
+    clrscr;
+    writeln('===============================');
+    writeln('         STRUK PEMBELIAN       ');
+    writeln('===============================');
+    writeln('Jenis Mobil     : ', showroom[jenis].namaJenis);
+    writeln('Merk Mobil      : ', showroom[jenis].daftarMobil[merk].merk);
+    writeln('Harga Mobil     : Rp ', showroom[jenis].daftarMobil[merk].harga:0:0);
+    
     if skemaPembayaran = 'Cicilan' then
     begin
         write('Masukkan lama cicilan (dalam tahun): ');
         readln(lamaCicilan);
         cicilan := HitungCicilan(showroom[jenis].daftarMobil[merk].harga, lamaCicilan);
+        writeln('Skema Pembayaran: Cicilan');
+        writeln('Lama Cicilan    : ', lamaCicilan, ' tahun');
         writeln('Cicilan per bulan: Rp ', cicilan:0:0);
     end
     else if skemaPembayaran = 'Cash' then
     begin
-        writeln('Total pembayaran (cash): Rp ', showroom[jenis].daftarMobil[merk].harga:0:0);
+        writeln('Skema Pembayaran: Cash');
+        writeln('Total Pembayaran (cash): Rp ', showroom[jenis].daftarMobil[merk].harga:0:0);
     end;
+
+    writeln('===============================');
+    writeln('Terima kasih telah berbelanja!');
+    writeln('===============================');
 end;
 
 begin
